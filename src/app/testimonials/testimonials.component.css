@@ -1,0 +1,23 @@
+.testimonials .testimonial-content{
+    border-radius: 40px;
+    border: 1px solid #6D91EE;
+}
+.testimonials .testimonial-img img{
+    width: 80px;
+    height: 80px;
+}
+.testimonials h5{
+font-size: 18px;
+font-weight: 700;
+color: #6D91EE;
+}
+.testimonials p{
+font-size: 14px;
+font-weight: 400;
+color: #22366A;
+}
+.testimonials .rates i{
+    color: #6D91EE;
+    padding-right: 10px;
+    font-size: 14px;
+}

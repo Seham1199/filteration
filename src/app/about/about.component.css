@@ -1,0 +1,75 @@
+.about{
+    background-image: url(../../assets/images/Rectangle\ 262.png);
+    background-size: 100% 100%;
+}
+.about::before{
+    content: "";
+    background-image: url(../../assets/images/Vector\ 8.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 73%;
+    height: 100%;
+    z-index: 1;
+}
+.about h2{
+font-weight: 900;
+font-size: 38px;
+margin-top: 40px;
+margin-bottom: 35px;
+}
+.about p{
+margin-bottom: 20px;
+font-size: 16px;
+line-height: 26px;
+}
+ .about .where{
+  z-index: 29999;
+  padding-top: 60px;
+ } 
+.about .where-content{
+    padding-left: 100px;
+}
+.about .help button{
+    border-radius: 71px; 
+    font-size: 18px;
+    font-weight: 500;
+padding: 10px 39px;
+    background: #EEC04B;
+    color: #515151;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+.about .help button:hover{
+    background-color: #fff;
+    color: #eec04b !important;;
+}
+@media (max-width:1200px) {
+.about::before{
+  background-color:#6D91EE ;
+  width: 50%;
+}
+}
+@media (max-width:991px) {
+.about::before{
+    display: none;
+}
+.about .about-content{
+    text-align: center;
+}
+.about .where-content{
+    text-align: center !important;
+    padding-left: 0px;
+}
+.about .help{
+    text-align: center;
+}
+}
+@media (max-width:575px) {
+.about h2{
+    font-size: 25px;
+}
+.about p{
+    font-size: 14px;
+}
+}

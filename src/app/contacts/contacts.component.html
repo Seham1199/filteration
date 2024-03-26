@@ -1,0 +1,59 @@
+<section class="contact py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="main-header">Contact Us
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                    <div class="line4"></div>
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="contact-content d-md-flex justify-content-evenly align-items-center">
+                    <div class="contact-form">
+                        <form  [formGroup]="dataForm" (ngSubmit)="handleForm()">
+                            <div class="form-item mb-3">
+                                <input type="text" name="name" id="name" placeholder="Name" class="form-control" formControlName="name">
+                                <div *ngIf="dataForm.get('name')?.errors && (dataForm.get('name')?.touched || dataForm.get('name')?.value.length > 0 )" class="alert alert-danger mt-2">
+                                    <p *ngIf="dataForm.get('name')?.getError('required')">Name is Required</p>
+                                    <p *ngIf="dataForm.get('name')?.getError('minlength')">Name MinLength 3</p>
+                                    <p *ngIf="dataForm.get('name')?.getError('maxlength')">Name MaxLength 10</p>
+                                </div>
+                            </div>
+                            <div class="form-item mb-3">
+                                <input type="email" name="email" id="email" placeholder="Email" class="form-control" formControlName="email">
+                                <div *ngIf="dataForm.get('email')?.errors && (dataForm.get('email')?.touched || dataForm.get('email')?.value.length > 0 )" class="alert alert-danger mt-2">
+                                    <p *ngIf="dataForm.get('email')?.getError('required')">email is Required</p>
+                                    <p *ngIf="dataForm.get('email')?.getError('email')">email Invalid Format</p>
+                                </div>
+                            </div>
+                            <div class="form-item mb-3">
+                                <input type="tel" name="phone" id="phone" placeholder="Phone" class="form-control" formControlName="phone">
+                                <div *ngIf="dataForm.get('phone')?.errors && (dataForm.get('phone')?.touched || dataForm.get('phone')?.value.length > 0 )" class="alert alert-danger mt-2">
+                                    <p *ngIf="dataForm.get('phone')?.getError('required')">phone is Required</p>
+                                    <p *ngIf="dataForm.get('phone')?.getError('pattern')">Accept only Egypt Numbers</p>
+                                </div>
+                            </div>
+                            <div class="send text-center">
+                                <button class="btn" type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="contact-social">
+                      <div class="contact-message mb-4">
+                        <i class="fa-solid fa-envelope pe-3"></i>
+                        <span>upskilling.eg1&#64;gmail.com</span>
+                      </div>
+                      <div class="contact-tel">
+                        <i class="fa-solid fa-phone pe-3"></i>
+                        <span>+20 115 493 2137</span>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
