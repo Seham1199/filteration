@@ -1,0 +1,20 @@
+.navbar-brand{
+    color: #6D91EE !important;
+    padding-top: 8px;
+}
+.navbar .nav-link{
+    color: #616161;
+    padding: 8px;
+    font-size: 14px;
+    transition: all 0.15s ease-in-out;
+}
+.navbar .active{
+    background-color: #6D91EE;
+    border-radius: 0.5rem;
+    color: #fff;
+}
+@media (max-width:991px) {
+.navbar .nav-link{
+    text-align: center;
+}  
+}
